@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certify — Certificate Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section id="loginScreen" class="login-screen">
+    <div class="login-copy">
+      <a class="brand brand-light" href="#"><span class="brand-mark">C</span> Certify</a>
+      <div class="login-hero">
+        <p class="eyebrow">CERTIFICATES, SIMPLIFIED</p>
+        <h1>Recognition,<br><em>made lasting.</em></h1>
+        <p>Design, issue, and verify credentials your learners will be proud to share.</p>
+      </div>
+      <div class="trust-row"><span>●</span> Trusted by educators &amp; training providers</div>
+    </div>
+    <div class="login-panel">
+      <div class="login-form">
+        <div class="mobile-brand brand"><span class="brand-mark">C</span> Certify</div>
+        <p class="eyebrow">WELCOME BACK</p>
+        <h2>Sign in to your workspace</h2>
+        <p class="muted">Manage your courses and credentials from one place.</p>
+        <form id="loginForm" novalidate>
+          <label>Email address<input type="email" value="hello@acmeacademy.com" required></label>
+          <label>Password <span class="forgot">Forgot password?</span><input type="password" value="password" required></label>
+          <button class="btn btn-primary btn-full" type="submit">Sign in <span>→</span></button>
+        </form>
+        <p class="new-user">New to Certify? <a href="#">Create an account</a></p>
+      </div>
+    </div>
+  </section>
+
+  <main id="app" class="app hidden">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark">C</span> Certify</a>
+      <nav>
+        <button class="nav-link active" data-page="dashboard"><span>⌂</span> Overview</button>
+        <button class="nav-link" data-page="courses"><span>▣</span> Courses</button>
+        <button class="nav-link" data-page="credentials"><span>✦</span> Certificates</button>
+        <button class="nav-link" data-page="templates"><span>▧</span> Certificate designs</button>
+        <button class="nav-link" data-page="payments"><span>◈</span> Billing &amp; payments</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <button class="nav-link" data-page="settings"><span>⚙</span> Settings</button>
+        <div class="profile"><div class="avatar">AS</div><div><b>Alex Smith</b><small>Acme Academy</small></div><button id="signOut" title="Sign out">↪</button></div>
+      </div>
+    </aside>
+    <section class="content">
+      <header class="topbar"><button class="mobile-menu">☰</button><div><p id="breadcrumb" class="eyebrow">WORKSPACE</p><h2 id="pageTitle">Good morning, Alex</h2></div><div class="top-actions"><button class="icon-button">⌕</button><button class="icon-button notification">♢</button><button class="btn btn-primary" id="primaryAction" data-action="new-course">+ New course</button></div></header>
+      <div id="pageContent"></div>
+    </section>
+  </main>
+
+  <div id="modalRoot"></div>
+  <script src="app.js"></script>
+</body>
+</html>
